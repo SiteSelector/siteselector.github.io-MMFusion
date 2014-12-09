@@ -16,6 +16,23 @@ change map layers from Google Fusion Tables.
 
 [aa]: http://piotrgisworks.blogspot.com/ 
 
+Make changes in index.html
+
+Lines to change  
+[3]Change title.
+[13] This coordinates it's where your map will be centered
+[16] Zoom level, optional to modified
+[17-22] Map Controls (false/true) , optional to modified  
+[29 & 39] Fusion table location column is an existing geocoded column of type Location. For example country names or county names, zip codes etc.
+[30 & 40] Fusion Table ID, you can use FT Wizard to extract ID
+[32-33 & 42-43] Fusion table style and template ID, you can use also Wizard.
+
+TIP. You can add more layers just copy paste the code and name it as next layer ie. layer3, layer4. 
+
+If you want to customize your slider change parameter in lines [76], below list of options based on 
+
+[Visit Piotr GIS Works ]
+
 DEMO
 ------------
 
@@ -36,4 +53,5 @@ FusionTablesSlider uses James Smiths' [jQuery Simple Slider][ss]
 [dl]: https://github.com/lucastimmons/FusionTablesScrubber/
 
 FusionTablesSlider is based on Lucas Timmons [FusionTablesScrubber][dl]
+
 
