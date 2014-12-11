@@ -26,23 +26,33 @@ function initialize() {
 	//You can use FT Wizard http://fusion-tables-api-samples.googlecode.com/svn/trunk/FusionTablesLayerWizard/src/index.html
 layer1 = new google.maps.FusionTablesLayer({
       query: {
-        select: 'XXXX-GEOODED-COLUMN-XXXX',
-        from: 'XXXX-FUSION-TABLE-ID-XXXX'
+        select: "geometry",
+        from: '1RMZse-BRMljAWYN7TofpxPfO7dD0sKwxFGabKZPX' //1970
       },
-        styleId: XXXX,
-        templateId: XXXX,
+        styleId: 2,
+        templateId: 2,
       map: map, 
     });
 	
 layer2 = new google.maps.FusionTablesLayer({
       query: {
-        select: 'XXXX-GEOODED-COLUMN-XXXX',
-        from: 'XXXX-FUSION-TABLE-ID-XXXX'
+        select: "geometry",
+        from: '19SPcYAmPhiFowpCVB-BItq5-jdXaMZwyP764kqIV' //1990
        },
-        styleId: XXXX,
-        templateId: XXXX,
+        styleId: 2,
+        templateId: 2,
       map: map, 
     });
+    
+ layer3 = new google.maps.FusionTablesLayer({
+      query: {
+        select: "geometry",
+        from: '1PYi5UcYK3d8qaP3A-x0kTHfcrGYweuJIWbC3V6jH' //2010
+       },
+        styleId: 2,
+        templateId: 3,
+      map: map, 
+    });   
 
 
 layer1.setMap(map);
@@ -59,11 +69,16 @@ function changeLayer(tableidselections) {
 	if (tableidselections == 2){
 		clearmap();
 		layer2.setMap(map); }
+		
+	if (tableidselections == 3){
+		clearmap();
+		layer3.setMap(map); 	
 		}
 
 function clearmap() {
 	layer1.setMap(null);
 	layer2.setMap(null);
+	layer3.setMap(null)
 }
 
 </script>
